@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CustomNavbar from './components/Navbar';
 import Home from './components/Home';
+import About from './components/About';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <CustomNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Add more routes here for About, Projects, Contact pages */}
+          <Route path="/about"  element={<About/>}/>
         </Routes>
       </BrowserRouter>
     </div>

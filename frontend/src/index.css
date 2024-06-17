@@ -23,7 +23,7 @@ code {
   font-size: 45px;
   font-weight: bold;
   font-family: Inter;
-  color: #fdd247
+  color: #fdd247;
 }
 
 .nav-item {
@@ -31,12 +31,12 @@ code {
 }
 
 .nav-item a {
-  color: aliceblue; /* Original color */
-  text-decoration: none; /* Remove underline */
+  color: aliceblue; 
+  text-decoration: none;
 }
 
 .nav-item a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline; 
 }
 
 .home {
@@ -68,6 +68,53 @@ code {
 }
 
 .profile-pic {
+  max-width: 600px;
+  height: auto;
+}
+
+.aboutpage {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.about {
+  font-size: 64px;
+  font-weight: bold;
+  color: #fdd247;
+  margin-bottom: 20px; /* Add margin bottom to create space between "About Me" and personal info */
+}
+
+.info-item {
+  margin-bottom: 5px; 
+}
+
+.heads {
+  color: #fdd247;
+  font-weight: bold;
+}
+
+.values {
+  margin-left: 5px;
+}
+
+.content {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.info {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.profile-pic-about{
+  margin-right: 151px;
+  margin-left: -330px;
   max-width: 600px;
   height: auto;
 }
