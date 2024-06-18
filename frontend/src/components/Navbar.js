@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function CustomNavbar() {
   return (
     <div className="nav">
-      <div className="logo">Rohan</div>
+      <div className="logo"><Link to="/">Rohan</Link></div>
       <div className="nav-item">
         <Link to="/">Home</Link>
       </div>

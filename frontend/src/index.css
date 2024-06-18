@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   background-color: black;
   color: aliceblue;
 }
@@ -17,13 +17,22 @@ code {
   text-align: center;
   justify-content: space-around;
   padding: 10px;
+  background-color: black;
 }
 
 .logo {
   font-size: 45px;
   font-weight: bold;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   color: #fdd247;
+}
+.logo a{
+  color: #fdd247;
+  text-decoration: none;
+}
+.logo a:hover{
+  color: #e6c200;
+  text-decoration: none;
 }
 
 .nav-item {
@@ -37,6 +46,11 @@ code {
 
 .nav-item a:hover {
   text-decoration: underline; 
+  color: #e6c200;
+}
+
+.nav-item a.active {
+  color: #fdd247;
 }
 
 .home {
@@ -83,11 +97,11 @@ code {
   font-size: 64px;
   font-weight: bold;
   color: #fdd247;
-  margin-bottom: 20px; /* Add margin bottom to create space between "About Me" and personal info */
+  margin-bottom: 20px;
 }
 
 .info-item {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 .heads {
@@ -101,7 +115,7 @@ code {
 
 .content {
   display: flex;
-  align-items: center; /* Center vertically */
+  align-items: center;
   justify-content: space-between;
   padding: 20px;
   margin: 0 auto;
@@ -112,9 +126,50 @@ code {
   padding: 0 20px;
 }
 
-.profile-pic-about{
+.profile-pic-about {
   margin-right: 151px;
   margin-left: -330px;
   max-width: 600px;
   height: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.input {
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.message-input {
+  height: 150px;
+  resize: none;
+}
+
+.submit-button {
+  background-color: #fdd247;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #e6c200;
+}
+
+.contactMe {
+  color: #fdd247;
 }
