@@ -82,6 +82,8 @@ code {
 }
 
 .profile-pic {
+  margin-right: 151px;
+  margin-left: 60px;
   max-width: 600px;
   height: auto;
 }
@@ -128,7 +130,7 @@ code {
 
 .profile-pic-about {
   margin-right: 151px;
-  margin-left: -330px;
+  margin-left: 60px;
   max-width: 600px;
   height: auto;
 }
