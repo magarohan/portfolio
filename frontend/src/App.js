@@ -3,6 +3,7 @@ import CustomNavbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import ContactForm  from './components/ContactForm';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about"  element={<About/>}/>
           <Route path="/contact"  element={<ContactForm/>}/>
+          <Route path="/projects"  element={<Projects/>}/>
 
         </Routes>
       </BrowserRouter>

@@ -226,7 +226,35 @@ code {
   color: #fdd247;
 }
 
-/* Media Queries */
+.project {
+  margin: 50px;
+  border: 1px solid transparent; /* Initial border color set to transparent */
+  transition: border-color 0.3s ease; /* Smooth transition for the border color */
+}
+
+.project:hover {
+  border-color: #ccc; /* Border color on hover */
+}
+
+.project-image {
+  width: 100px;
+  height: 100px;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.contains {
+  display: flex;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
