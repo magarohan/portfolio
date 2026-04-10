@@ -4,12 +4,13 @@ import SkillBox from "../../chip/SkillBox";
 
 import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
 
-import { SiJavascript, SiMongodb, SiExpress, SiFlutter } from "react-icons/si";
+import { SiJavascript, SiMongodb, SiExpress, SiFlutter, SiFirebase } from "react-icons/si";
 import { FaReact, FaGithub } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io";
 
 const Skills = ({ darkMode }) => {
   return (
+    //TODO: remove other skills
     <div id="skills">
       <div className=" container m-auto  mt-16">
         {/* heading */}
@@ -34,23 +35,9 @@ const Skills = ({ darkMode }) => {
               className="progress flex items-center h-[100%] justify-end md:justify-center"
             >
               <div className=" flex flex-col gap-6  w-3/4  my-5 md:w-[90%]">
-                <ProgressBar
-                  logo={
-                    <div className="flex gap-1 text-xl items-center">
-                      <IoLogoHtml5 />
-                      <IoLogoCss3 />
-                    </div>
-                  }
-                  name={"HTML & CSS"}
-                  value={70}
-                />
-                <ProgressBar
-                  logo={<SiJavascript />}
-                  name={"Javascript"}
-                  value={80}
-                />
-                <ProgressBar logo={<FaReact />} name={"React Js"} value={70} />
                 <ProgressBar logo={<SiFlutter />} name={"Flutter"} value={80} />
+                <ProgressBar logo={<SiFirebase />} name={"Firebase"} value={80} />
+                <ProgressBar logo={<FaGithub />} name={"GitHub"} value={80} />
               </div>
             </div>
           </div>

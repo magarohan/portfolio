@@ -24,7 +24,7 @@ const Hero = () => {
             </h2>
             <TypeAnimation
               data-aos="fade-up"
-              sequence={["Mobile Developer", 2000, "Web Developer", 2000, ""]}
+              sequence={["Mobile Developer", 2000, ]}
               speed={30}
               wrapper="h2"
               repeat={Infinity}
