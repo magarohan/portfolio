@@ -9,6 +9,7 @@ import { FiDownload } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import CV from "../../assets/Rahan Raj Magar CV.pdf";
+import profileImage from "../../assets/profile.png";
 
 const Hero = () => {
   return (
@@ -95,9 +96,8 @@ const Hero = () => {
             <img
               data-aos="fade-up"
               className=" h-[90%]  w-full object-cover md:h-[95%] md:m-auto sm:m-0"
-              src="src\assets\profile.png"
-              // src={mine}
-              alt="mine"
+              src={profileImage}
+              alt="profile"
             />
           </div>
         </div>
