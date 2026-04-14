@@ -1,29 +1,46 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { BsArrowRight } from "react-icons/bs";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 const Contact = () => {
   const form = useRef();
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState(""); 
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
-        "service_8lldq2c",
-        "template_swaf39e",
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
         form.current,
-        "publicKey"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
-          console.log("Message sent!", result.text);
+          setMessage("✓ Message sent successfully!");
+          setMessageType("success");
+          form.current.reset();
+          setTimeout(() => {
+            setMessage("");
+            setMessageType("");
+          }, 5000);
         },
         (error) => {
-          console.log("Error:", error.text);
+          console.error("EmailJS Error:", error);
+          setMessage(`✗ Failed to send message. ${error.text || "Please check your EmailJS credentials."}`);
+          setMessageType("error");
+          setTimeout(() => {
+            setMessage("");
+            setMessageType("");
+          }, 5000);
         }
-      );
+      )
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -40,7 +57,7 @@ const Contact = () => {
           <div className="w-1/2 flex flex-col items-end gap-3 sm:w-3/4">
             <h1 className="text-5xl font-bold sm:text-3xl">You Need</h1>
             <h3 className="text-xl sm:text-lg">
-              A mobile app or a website? Let's talk!
+              Need a mobile app? Let's talk!
             </h3>
           </div>
 
@@ -57,6 +74,18 @@ const Contact = () => {
             onSubmit={sendEmail}
             className="flex flex-col gap-5 w-[70%] md:w-full sm:w-[95%] mx-auto"
           >
+            {message && (
+              <div
+                className={`p-3 rounded-lg text-center font-semibold ${
+                  messageType === "success"
+                    ? "bg-green-100 text-green-800"
+                    : "bg-red-100 text-red-800"
+                }`}
+              >
+                {message}
+              </div>
+            )}
+
             <input
               type="email"
               name="user_email"
@@ -83,9 +112,10 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="bg-yellow-500 text-white font-semibold p-2 rounded-lg flex items-center justify-center gap-2"
+              disabled={loading}
+              className="bg-yellow-500 text-white font-semibold p-2 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>Send</span>
+              <span>{loading ? "Sending..." : "Send"}</span>
               <RiSendPlaneFill />
             </button>
           </form>
