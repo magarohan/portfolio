@@ -41,13 +41,13 @@ const Hero = () => {
           <div data-aos="fade-up" className="buttons flex gap-5">
             <a
               href="https://www.linkedin.com/in/rahan-raj-magar/"
-              className=" bg-black text-[1rem] text-white px-10 py-2 sm:px-8 rounded-lg font-bold  hover:text-yellow-500"
+              className=" bg-black text-[1rem] text-white px-10 py-2 sm:px-8 rounded-lg font-bold  hover:text-blue-500"
             >
               <span> Hire Me</span>
             </a>
             <a
               href={CV}
-              className="flex items-center gap-2 border- text-[1rem] bg-white border-black px-7 py-2 sm:px-6 rounded-lg font-bold  hover:text-yellow-500"
+              className="flex items-center gap-2 border- text-[1rem] bg-white border-black px-7 py-2 sm:px-6 rounded-lg font-bold  hover:text-blue-500"
               download
             >
               <div className="flex items-center gap-1">
