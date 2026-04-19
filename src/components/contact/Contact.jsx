@@ -1,76 +1,122 @@
-import React, {useState} from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { BsArrowRight } from "react-icons/bs";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 const Contact = () => {
-  const [loading, setLoading] = useState(false); 
+  const form = useRef();
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState(""); 
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setMessage("✓ Message sent successfully!");
+          setMessageType("success");
+          form.current.reset();
+          setTimeout(() => {
+            setMessage("");
+            setMessageType("");
+          }, 5000);
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          setMessage(`✗ Failed to send message. ${error.text || "Please check your EmailJS credentials."}`);
+          setMessageType("error");
+          setTimeout(() => {
+            setMessage("");
+            setMessageType("");
+          }, 5000);
+        }
+      )
+      .finally(() => setLoading(false));
+  };
+
   return (
     <div id="contact" className="container m-auto mt-16">
-      {/* heading */}
-      <div 
-      // data-aos="fade-up"
-       className="relative mb-5">
-        <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl">
+      <div className="relative mb-5">
+        <h3 className="text-3xl font-black text-gray-400 sm:text-2xl">
           Contact
         </h3>
         <span className="h-[1.1px] right-0 absolute w-[92%] bg-gray-300 block"></span>
       </div>
 
-      {/* card*/}
-      <div className="card-wrapper w-[90%] sm:w-[100%] mx-auto mt-5 flex items-center justify-center sm:flex-col">
+      <div className="card-wrapper w-[90%] mx-auto mt-5 flex items-center justify-center sm:flex-col">
         <div className="left w-[70%] flex-1 flex items-center justify-center sm:flex-col sm:w-full">
-          <div className="flex-3 w-1/2 gap-3 flex items-end justify-end  flex-col sm:w-3/4">
-            <div 
-            data-aos="zoom-in"
-            >
-              <h1 className="text-5xl font-bold sm:text-3xl">You Need</h1>
-              <h3 className="text-xl sm:text-lg">
-                A mobile app or a website? Let's talk!
-              </h3>
-            </div>
+          <div className="w-1/2 flex flex-col items-end gap-3 sm:w-3/4">
+            <h1 className="text-5xl font-bold sm:text-3xl">You Need</h1>
+            <h3 className="text-xl sm:text-lg">
+              Need a mobile app? Let's talk!
+            </h3>
           </div>
 
           <div className="p-5 flex items-center justify-center">
-            <button className="text-blue-500 font-extrabold text-3xl p-2 rounded-lg shadow">
+            <button className="text-yellow-500 font-extrabold text-3xl p-2 rounded-lg shadow">
               <BsArrowRight className="md:rotate-90" />
             </button>
           </div>
         </div>
+
         <div className="right flex-1">
           <form
-            
-            data-aos="zoom-in"
-            
-            className="flex justify-center items-center flex-col gap-5 w-[70%] md:w-[100%] sm:w-[95%] mx-auto"
-            action="mailto:xyz@gmail.com"
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col gap-5 w-[70%] md:w-full sm:w-[95%] mx-auto"
           >
+            {message && (
+              <div
+                className={`p-3 rounded-lg text-center font-semibold ${
+                  messageType === "success"
+                    ? "bg-green-100 text-green-800"
+                    : "bg-red-100 text-red-800"
+                }`}
+              >
+                {message}
+              </div>
+            )}
+
             <input
-              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
               type="email"
+              name="user_email"
               placeholder="e.g. example@email.com"
-              name=""
+              className="px-3 p-2 rounded-lg w-full shadow"
+              required
             />
+
             <input
-              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
               type="text"
+              name="user_name"
               placeholder="e.g. John Doe"
-              name=""
+              className="px-3 p-2 rounded-lg w-full shadow"
+              required
             />
+
             <textarea
-              className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
+              name="message"
               rows="4"
-              cols="50"
               placeholder="Write your message"
-              name=""
-              id=""
+              className="px-3 p-2 rounded-lg w-full shadow"
+              required
             />
+
             <button
-              className="bg-blue-500 text-white font-semibold p-2 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               type="submit"
               disabled={loading}
+              className="bg-blue-500 text-white font-semibold p-2 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>Send</span>
-              <RiSendPlaneFill/>
+              <span>{loading ? "Sending..." : "Send"}</span>
+              <RiSendPlaneFill />
             </button>
           </form>
         </div>
