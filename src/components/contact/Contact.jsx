@@ -113,7 +113,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className="bg-yellow-500 text-white font-semibold p-2 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-blue-500 text-white font-semibold p-2 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span>{loading ? "Sending..." : "Send"}</span>
               <RiSendPlaneFill />

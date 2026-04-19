@@ -13,7 +13,7 @@ import profileImage from "../../assets/profile.png";
 
 const Hero = () => {
   return (
-    <div id="home" className={` bg-gradient-to-r from-green-200 to-blue-200 `}>
+    <div id="home" className={"container m-auto mt-16"}>
       <div className=" container mx-auto pt-5 h-[750px] md:h-[100vh] md:flex-col-reverse sm:h-[780px]  flex sm:flex-col-reverse sm:pt-0 ">
         <div className=" left mt-4 md:mt-0 flex-1 flex flex-col justify-center gap-5 w-1/2 md:w-full md:py-2 sm:py-0">
           <div className="info w-fit flex flex-col items-start justify-center gap-3 sm:gap-2">
@@ -29,28 +29,25 @@ const Hero = () => {
               speed={30}
               wrapper="h2"
               repeat={Infinity}
-              className="text-yellow-500 text-4xl font-bold sm:text-3xl"
+              className="text-blue-500 text-4xl font-bold sm:text-3xl"
             />
             <p
               // data-aos="fade-up"
               className=" text-[1.1rem] font-medium w-3/4 md:w-full text-gray-600 sm:text-[.95rem]"
             >
-              Computer Science graduate with a passion for mobile and web
-              development. Skilled in creating dynamic and responsive
-              applications using modern technologies. Eager to contribute to
-              impactful projects and collaborate with innovative teams.
+              An aspiring mobile developer with a passion for creating innovative and user-friendly applications. With a strong foundation in programming languages and a keen eye for design, I am dedicated to crafting seamless and engaging mobile experiences. I am eager to contribute my skills and creativity to the world of mobile development, constantly learning and growing in this dynamic field.
             </p>
           </div>
           <div data-aos="fade-up" className="buttons flex gap-5">
             <a
               href="https://www.linkedin.com/in/rahan-raj-magar/"
-              className=" bg-black text-[1rem] text-white px-10 py-2 sm:px-8 rounded-lg font-bold  hover:text-yellow-500"
+              className=" bg-black text-[1rem] text-white px-10 py-2 sm:px-8 rounded-lg font-bold  hover:text-blue-500"
             >
               <span> Hire Me</span>
             </a>
             <a
               href={CV}
-              className="flex items-center gap-2 border- text-[1rem] bg-white border-black px-7 py-2 sm:px-6 rounded-lg font-bold  hover:text-yellow-500"
+              className="flex items-center gap-2 border- text-[1rem] bg-white border-black px-7 py-2 sm:px-6 rounded-lg font-bold  hover:text-blue-500"
               download
             >
               <div className="flex items-center gap-1">
