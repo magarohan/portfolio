@@ -8,8 +8,10 @@ import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
+import Lottie from "lottie-react";
 import CV from "../../assets/Rahan Raj Magar CV.pdf";
 import profileImage from "../../assets/profile.png";
+import blobAnimation from "../../assets/Json/Gradient blob.json";
 
 const Hero = () => {
   return (
@@ -25,16 +27,13 @@ const Hero = () => {
             </h2>
             <TypeAnimation
               data-aos="fade-up"
-              sequence={["Mobile Developer", 2000, ]}
+              sequence={["Mobile Developer", 2000]}
               speed={30}
               wrapper="h2"
               repeat={Infinity}
               className="text-blue-500 text-4xl font-bold sm:text-3xl"
             />
-            <p
-              // data-aos="fade-up"
-              className=" text-[1.1rem] font-medium w-3/4 md:w-full text-gray-600 sm:text-[.95rem]"
-            >
+            <p className=" text-[1.1rem] font-medium w-3/4 md:w-full text-gray-600 sm:text-[.95rem]">
               An aspiring mobile developer with a passion for creating innovative and user-friendly applications. With a strong foundation in programming languages and a keen eye for design, I am dedicated to crafting seamless and engaging mobile experiences. I am eager to contribute my skills and creativity to the world of mobile development, constantly learning and growing in this dynamic field.
             </p>
           </div>
@@ -47,7 +46,7 @@ const Hero = () => {
             </a>
             <a
               href={CV}
-              className="flex items-center gap-2 border- text-[1rem] bg-white border-black px-7 py-2 sm:px-6 rounded-lg font-bold  hover:text-blue-500"
+              className="flex items-center gap-2 text-[1rem] bg-white border border-black px-7 py-2 sm:px-6 rounded-lg font-bold hover:text-blue-500"
               download
             >
               <div className="flex items-center gap-1">
@@ -63,36 +62,40 @@ const Hero = () => {
             >
               <li>
                 <a href="https://github.com/magarohan">
-                  {""}
-                  <AiFillGithub className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125" />{" "}
+                  <AiFillGithub className=" h-[1.8rem] w-[1.8rem] hover:scale-125" />
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/rahan-raj-magar/">
-                  {""}
-                  <FaLinkedinIn className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125 " />{" "}
+                  <FaLinkedinIn className=" h-[1.8rem] w-[1.8rem] hover:scale-125 " />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/_rohan.magar_/">
-                  {" "}
-                  <AiFillInstagram className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125  " />{" "}
+                  <AiFillInstagram className=" h-[1.8rem] w-[1.8rem] hover:scale-125" />
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/MaGaRoHaN/">
-                  {" "}
-                  <FaFacebook className=" h-[1.8rem] w-[1.8rem] text-xl hover:scale-125  " />{" "}
+                  <FaFacebook className=" h-[1.8rem] w-[1.8rem] hover:scale-125" />
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="right  top-5 flex-1 flex items-center justify-center md:items-end sm:items-end">
+
+        <div className="right top-5 flex-1 flex items-center justify-center md:items-end sm:items-end">
           <div className="relative h-[88%] w-fit flex items-center sm:items-end">
+            <div className="absolute inset-x-0 top-[280px] left-[100px] flex items-center justify-center pointer-events-none">
+              <Lottie
+                animationData={blobAnimation}
+                loop={true}
+                className="h-[100%] w-[100%] max-w-[4500px]"
+              />
+            </div>
             <img
               data-aos="fade-up"
-              className=" h-[90%]  w-full object-cover md:h-[95%] md:m-auto sm:m-0"
+              className="relative z-10 h-[90%] w-full object-cover md:h-[95%] md:m-auto sm:m-0"
               src={profileImage}
               alt="profile"
             />
