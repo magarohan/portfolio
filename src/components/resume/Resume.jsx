@@ -37,15 +37,13 @@ const Resume = () => {
                   Flutter developer Intern
                 </h1>
                 <span className=" text-[.9rem] font-semibold text-gray-500 sm:text-base">
-                  WebStudio Nepal
+                  Dark Matter Productions
                 </span>
                 <span className=" text-[.9rem] font-semibold text-blue-500 sm:text-base">
-                  September 2025 - December 2025
+                  September 2025 - 
                 </span>
                 <p className=" text-[.9rem] text-justify break-words text-gray-500">
-                  Assisted in implementing REST APIs and integrating them into
-                  mobile applications. Contributed to developing and improving
-                  UI components across multiple mobile apps.
+                  Assisted in developing responsive and reusable UI components, integrating backend APIs using the BLoC state management architecture, and supporting CI/CD workflows to streamline application development, testing, and deployment processes.
                 </p>
               </div>
             </div>
