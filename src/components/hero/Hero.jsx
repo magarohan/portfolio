@@ -10,7 +10,7 @@ import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import Lottie from "lottie-react";
 import CV from "../../assets/Rahan Raj Magar CV.pdf";
-import profileImage from "../../assets/profile.png";
+import profileImage from "../../assets/profile_image.png";
 import blobAnimation from "../../assets/Json/Gradient blob.json";
 
 const Hero = () => {
@@ -91,7 +91,7 @@ const Hero = () => {
               <Lottie
                 animationData={blobAnimation}
                 loop={true}
-                className="h-[100%] w-[100%] max-w-[4500px]"
+                className="h-[100%] w-[100%] max-w-[6000px] max-h-[6000px]"
               />
             </div>
             <img
