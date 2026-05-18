@@ -62,7 +62,7 @@ const Contact = () => {
           </div>
 
           <div className="p-5 flex items-center justify-center">
-            <button className="text-yellow-500 font-extrabold text-3xl p-2 rounded-lg shadow">
+            <button className="text-blue-500 font-extrabold text-3xl p-2 rounded-lg shadow">
               <BsArrowRight className="md:rotate-90" />
             </button>
           </div>
