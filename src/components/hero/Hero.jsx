@@ -87,11 +87,11 @@ const Hero = () => {
 
         <div className="right top-5 flex-1 flex items-center justify-center md:items-end sm:items-end">
           <div className="relative h-[88%] w-fit flex items-center sm:items-end">
-            <div className="absolute inset-x-0 top-[360px] left-[100px] flex items-center justify-center pointer-events-none scale-150">
+            <div className="absolute inset-x-0 top-[260px] left-[100px] flex items-center justify-center pointer-events-none scale-125">
               <Lottie
                 animationData={blobAnimation}
                 loop={true}
-                className="h-[100%] w-[100%] max-w-[6000px] max-h-[6000px]"
+                className="h-[100%] w-[100%] max-w-[5000px] max-h-[5000px]"
               />
             </div>
             <img
