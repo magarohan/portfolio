@@ -6,11 +6,14 @@
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge\&logo=next.js\&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge\&logo=tailwind-css\&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge\&logo=vercel\&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ### 💻 Modern Developer Portfolio Website
 
-A responsive and modern portfolio website showcasing projects, skills, experience, and contact information.
+A sleek and responsive personal portfolio website showcasing my projects, skills, experience, and passion for software development.
+
+### 🌐 Live Website
+
+## https://www.rahanrajmagar.com.np/
 
 </div>
 
@@ -19,25 +22,16 @@ A responsive and modern portfolio website showcasing projects, skills, experienc
 # ✨ Features
 
 ✅ Fully Responsive Design
-✅ Smooth Animations & Transitions
 ✅ Modern UI/UX
+✅ Smooth Animations & Transitions
 ✅ Projects Showcase
-✅ Skills Section
-✅ Contact Form
+✅ Skills & Technologies Section
+✅ Experience Timeline
+✅ Contact Section
 ✅ Social Media Integration
-✅ Fast Performance
 ✅ SEO Friendly
+✅ Fast & Optimized Performance
 ✅ Dark Mode Support
-
----
-
-# 🖼 Preview
-
-> Add your portfolio screenshots here
-
-| Home                                 | Projects                                     | Contact                                    |
-| ------------------------------------ | -------------------------------------------- | ------------------------------------------ |
-| ![Home](public/screenshots/home.png) | ![Projects](public/screenshots/projects.png) | ![Contact](public/screenshots/contact.png) |
 
 ---
 
@@ -55,7 +49,7 @@ A responsive and modern portfolio website showcasing projects, skills, experienc
 
 # 📂 Project Structure
 
-```bash id="3x5jjw"
+```bash id="9h8wza"
 portfolio/
 ├── public/
 ├── src/
@@ -70,114 +64,42 @@ portfolio/
 
 ---
 
-# 🚀 Getting Started
-
-## Prerequisites
-
-Make sure you have installed:
-
-* Node.js
-* npm or yarn
-
----
-
-# ⚙️ Installation
-
-## 1️⃣ Clone the Repository
-
-```bash id="4l6f4z"
-git clone https://github.com/magarohan/portfolio.git
-```
-
-## 2️⃣ Navigate to Project Directory
-
-```bash id="y0y70m"
-cd portfolio
-```
-
-## 3️⃣ Install Dependencies
-
-```bash id="k4fgk7"
-npm install
-```
-
----
-
-# ▶️ Run Development Server
-
-```bash id="6h4r0w"
-npm run dev
-```
-
-Open your browser and visit:
-
-```bash id="6h4r0x"
-http://localhost:3000
-```
-
----
-
-# 📦 Build for Production
-
-```bash id="f0xvjq"
-npm run build
-```
-
----
-
-# 🌐 Deployment
-
-This project can be deployed easily on:
-
-* Vercel
-* Netlify
-* Firebase Hosting
-* GitHub Pages
-
----
-
-# 🎨 Customization
-
-You can easily customize:
-
-* Colors
-* Fonts
-* Sections
-* Animations
-* Personal Information
-* Social Links
-* Project Data
-
----
-
 # 📸 Sections Included
 
 * Hero Section
 * About Me
 * Skills
-* Projects
 * Experience
+* Featured Projects
 * Contact
 * Footer
 
 ---
 
-# 📈 Future Improvements
+# 🌟 Highlights
 
-* Blog Integration
-* CMS Support
-* Multi-language Support
-* Advanced Animations
-* Project Filtering
-* Admin Dashboard
+* Clean and minimal design
+* Mobile-first responsive layout
+* Interactive animations
+* Performance optimized
+* Easy to maintain and scale
 
 ---
 
-# 🧪 Running Tests
+# 👨‍💻 About Me
 
-```bash id="ejbq9l"
-npm test
-```
+Hi, I'm **Rohan Magar** — a passionate software developer focused on building modern  mobile applications with clean UI and scalable architecture.
+
+I enjoy creating impactful digital experiences and continuously learning new technologies.
+
+---
+
+# 🔗 Connect With Me
+
+* 🌐 Portfolio: https://www.rahanrajmagar.com.np/
+* 💻 GitHub: https://github.com/magarohan
+* 🔗 LinkedIn: https://linkedin.com/in/your-profile
+* 📧 Email: [your-email@example.com](mailto:your-email@example.com)
 
 ---
 
@@ -187,21 +109,10 @@ This project is licensed under the MIT License.
 
 ---
 
-# 👨‍💻 Author
-
-### Rohan Magar
-
-* GitHub: https://github.com/magarohan
-* Portfolio: https://your-portfolio-link.com
-* LinkedIn: https://linkedin.com/in/your-profile
-
----
-
 <div align="center">
 
-### ⭐ If you like this project, consider giving it a star!
+### ⭐ Thanks for visiting my portfolio repository!
 
 Made with ❤️ by Rohan Magar
 
 </div>
-
