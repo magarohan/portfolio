@@ -7,7 +7,7 @@ export const data = [
     title: "Blood Link",
     desc: "Blood bank management system",
     link: "https://github.com/magarohan/blood_link/releases/download/v1.0.0/app-release.apk",
-    git: "https://github.com/magarohan/blood_link",
+    git: "https://github.com/magarohan/blood_link_flutter",
   },
   {
     id: 2,
