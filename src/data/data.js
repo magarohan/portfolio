@@ -11,10 +11,11 @@ export const data = [
   },
   {
     id: 2,
-    img: 'https://i.postimg.cc/Bv75CLyN/4167022.jpg',
-    title: "Tarvel Agency",
-    link: "",
-    git: "",
+    img: 'https://i.postimg.cc/90fwZ9QQ/Chat-GPT-Image-Jul-10-2026-02-16-07-PM.png',
+    title: "Offline TODO",
+    desc: "TODO app with local storage",
+    link: "https://github.com/magarohan/todo_flutter/releases/download/app/app-release.apk",
+    git: "https://github.com/magarohan/todo_flutter",
   },
   {
     id: 3,
