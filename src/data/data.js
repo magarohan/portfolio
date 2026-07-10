@@ -19,11 +19,11 @@ export const data = [
   },
   {
     id: 3,
-    img: 'https://i.postimg.cc/wBjcJcW7/5890625.jpg',
-    title: "Music Player",
-    desc: "",
-    link: "",
-    git: "",
+    img: 'https://i.postimg.cc/jSVfDLP5/365-days-mockup.png',
+    title: "365 Days",
+    desc: "Ecommerce app",
+    link: "https://play.google.com/store/apps/details?id=com.isotope.ecommerce",
+    git: "https://github.com/darkmatterproduction/ecommerce-flutter",
   }
   
 ];
