@@ -15,19 +15,19 @@ const WorkCard = () => {
           <div
             data-aos="zoom-in"
             key={data.id}
-            className="flex flex-col justify-center items-center gap-4"
+            className="flex min-w-0 w-full flex-col items-center gap-4"
           >
-            <POPUP className="img-content relative">
-              <div className="h-[280px] w-[380px] hover:scale-125 transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto ">
+            <POPUP className="img-content relative w-full">
+              <div className="aspect-[19/14] w-full cursor-pointer overflow-hidden rounded-md shadow-xl">
                 <img
                   src={data.img}
                   alt={data.title}
-                  className=" object-fit w-full h-full hover:scale-125 transition duration-500 cursor-pointer"
+                  className="h-full w-full cursor-pointer object-cover transition duration-500 hover:scale-105"
                 />
               </div>
 
               <div
-                className={` popup w-full  h-[280px] shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] p-4`}
+                className="popup h-full w-full overflow-hidden rounded-md p-4 shadow-xl"
               >
                 <p className=" text-gray-900 text-base leading-[1.4] text-justify w-[90%]">
                   {data.desc}
@@ -67,11 +67,6 @@ export default WorkCard;
 
 const POPUP = styled.div`
   position: relative;
-  img {
-    &:hover {
-      transform: scaleX(2);
-    }
-  }
   .popup {
     position: absolute;
     top: 0;
