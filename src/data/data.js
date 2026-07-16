@@ -11,7 +11,7 @@ export const data = [
   },
   {
     id: 2,
-    img: 'https://i.postimg.cc/90fwZ9QQ/Chat-GPT-Image-Jul-10-2026-02-16-07-PM.png',
+    img: 'https://i.postimg.cc/PxrpmsDC/todo-mockup.png',
     title: "Offline TODO",
     desc: "TODO app with local storage",
     link: "https://github.com/magarohan/todo_flutter/releases/download/app/app-release.apk",
@@ -19,7 +19,7 @@ export const data = [
   },
   {
     id: 3,
-    img: 'https://i.postimg.cc/jSVfDLP5/365-days-mockup.png',
+    img: 'https://i.postimg.cc/hjPz9Wmz/365-days-mockup.png',
     title: "365 Days",
     desc: "Ecommerce app",
     link: "https://play.google.com/store/apps/details?id=com.isotope.ecommerce",
