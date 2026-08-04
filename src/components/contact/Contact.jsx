@@ -14,10 +14,15 @@ const Contact = () => {
     setLoading(true);
 
     emailjs
-      .sendForm(
+      .send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-        form.current,
+        {
+          name: form.current.elements.name.value,
+          email: form.current.elements.email.value,
+          message: form.current.elements.message.value,
+          time: new Date().toLocaleString(),
+        },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
@@ -88,7 +93,7 @@ const Contact = () => {
 
             <input
               type="email"
-              name="user_email"
+              name="email"
               placeholder="e.g. example@email.com"
               className="px-3 p-2 rounded-lg w-full shadow"
               required
@@ -96,7 +101,7 @@ const Contact = () => {
 
             <input
               type="text"
-              name="user_name"
+              name="name"
               placeholder="e.g. John Doe"
               className="px-3 p-2 rounded-lg w-full shadow"
               required
