@@ -39,7 +39,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/rahan-raj-magar/"
               className="bg-black text-white px-10 py-2 rounded-lg font-bold hover:text-blue-500"
             >
-              Hire Me
+              Connect With Me
             </a>
 
             <a
