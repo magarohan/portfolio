@@ -32,19 +32,36 @@ const Resume = () => {
                 <div className="line w-[230px] bg-gray-300 h-[2px] sm:w-[250px]"></div>
                 <div className="c2 w-[12px] h-[12px] rounded-full bg-white border-2 border-blue-500"></div>
               </div>
-              <div className=" flex flex-col gap-1 sm:gap-1 border-2 border-blue-400 shadow-[0px_0px_16px_1px_rgba(0,0,0,0.1)] p-3 rounded-lg">
-                <h1 className="text-[1.4rem] font-semibold sm:text-xl">
-                  Flutter developer Intern
-                </h1>
-                <span className=" text-[.9rem] font-semibold text-gray-500 sm:text-base">
-                  Dark Matter Productions
-                </span>
-                <span className=" text-[.9rem] font-semibold text-blue-500 sm:text-base">
-                  September 2025 - 
-                </span>
-                <p className=" text-[.9rem] text-justify break-words text-gray-500">
-                  Assisted in developing responsive and reusable UI components, integrating backend APIs using the BLoC state management architecture, and supporting CI/CD workflows to streamline application development, testing, and deployment processes.
-                </p>
+              <div className=" flex flex-col gap-4 sm:gap-4">
+                <div className=" flex flex-col gap-1 sm:gap-1 border-2 border-blue-400 shadow-[0px_0px_16px_1px_rgba(0,0,0,0.1)] p-3 rounded-lg">
+                  <h1 className="text-[1.4rem] font-semibold sm:text-xl">
+                    Flutter developer Intern
+                  </h1>
+                  <span className=" text-[.9rem] font-semibold text-gray-500 sm:text-base">
+                    Dark Matter Productions
+                  </span>
+                  <span className=" text-[.9rem] font-semibold text-blue-500 sm:text-base">
+                    Feb 2025 - May 2026
+                  </span>
+                  <p className=" text-[.9rem] text-justify break-words text-gray-500">
+                    Developed cross-platform Flutter features including authentication, shopping cart, responsive UI, RESTful API integration, secure local storage, and testing/debugging using Android Studio and Xcode.
+                  </p>
+                </div>
+
+                <div className=" flex flex-col gap-1 sm:gap-1 border-2 border-blue-400 shadow-[0px_0px_16px_1px_rgba(0,0,0,0.1)] p-3 rounded-lg">
+                  <h1 className="text-[1.4rem] font-semibold sm:text-xl">
+                    Flutter Developer Junior
+                  </h1>
+                  <span className=" text-[.9rem] font-semibold text-gray-500 sm:text-base">
+                    Darkmatter Productions
+                  </span>
+                  <span className=" text-[.9rem] font-semibold text-blue-500 sm:text-base">
+                    May 2026 - Present
+                  </span>
+                  <p className=" text-[.9rem] text-justify break-words text-gray-500">
+                    Developed and maintained production Flutter apps with authentication, payments, REST APIs, BLoC state management, and reusable responsive UI. Automated Android/iOS CI/CD using GitHub Actions, Fastlane, and CodeMagic, while contributing to code reviews, debugging, and production releases in an Agile team.
+                  </p>
+                </div>
               </div>
             </div>
           </fieldset>
